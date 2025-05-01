@@ -1,3 +1,4 @@
+# %% [code]
 import torch
 from typing import Any, Tuple
 from torch.utils.data import Dataset
@@ -28,7 +29,7 @@ class BrainMRIDataset(Dataset):
         """
         return len(self.df)
 
-    def __getitem__(self, idx) -> Tuple[Any, torch.Tensor]:
+    def __getitem__(self, idx) -> tuple[Any, torch.Tensor]:
         """
         Load and return an image and its corresponding mask at a specific index
 
